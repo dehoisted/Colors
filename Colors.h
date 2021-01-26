@@ -1,19 +1,52 @@
 /*
   Windows Only
-  Make certain text certain color
+  COLORSSSSS
   1/24/2020
-  orlando#1337 on discord
+  Made by orlando#1337 on discord
 */
 
-#pragma once
 #include <iostream>
-#include <windows.h> 
+#include <windows.h>
 
-class Colors {
-public:
-
+namespace Color {
     int colors = 6;
 
+    /*
+    Ok so basically you can parse a integer and then a string with color()
+    The number you parse in is the desired color you want;
+    Learn about the diff colors you can use;
+     I only included basic colors but with this you can use whatever color(s) you want.
+     */
+    void color(int i, std::string text)
+    {
+        HANDLE  hConsole;
+        int k;
+        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+        for (k = 1; k < 2; k++)
+        {
+            SetConsoleTextAttribute(hConsole, i);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(hConsole, 7);
+        }
+    }
+
+    // Set a color for the WHOLE entire program;
+    // After setting color, all text will be the color you parse in.
+    void set_color(int i)
+    {
+        HANDLE  hConsole;
+        int k;
+        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+        for (k = 1; k < 2; k++)
+        {
+            SetConsoleTextAttribute(hConsole, i);
+        }
+    }
+
+
+    // Basic Color Functions
     void blue(std::string text)
     {
         HANDLE  hConsole;
@@ -97,6 +130,7 @@ public:
             SetConsoleTextAttribute(hConsole, 7);
         }
     }
-};
+}
 
-Colors color;
+// Uses namespace so now you can just type red("TEXT");
+using namespace Color;
