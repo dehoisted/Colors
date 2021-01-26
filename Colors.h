@@ -47,89 +47,90 @@ namespace Color {
 
 
     // Basic Color Functions
-    void blue(std::string text)
-    {
-        HANDLE  hConsole;
-        int k;
-        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
-        for (k = 1; k < 2; k++)
+        void blue(std::string text)
         {
-            SetConsoleTextAttribute(hConsole, 1);
-            std::cout << text << std::endl;
-            SetConsoleTextAttribute(hConsole, 7);
+            HANDLE  hConsole;
+            int k;
+            hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            for (k = 1; k < 2; k++)
+            {
+                SetConsoleTextAttribute(hConsole, 1);
+                std::cout << text << std::endl;
+                SetConsoleTextAttribute(hConsole, 7);
+            }
         }
-    }
 
-    void green(std::string text)
-    {
-        HANDLE  hConsole;
-        int k;
-        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-        for (k = 1; k < 2; k++)
+        void green(std::string text)
         {
-            SetConsoleTextAttribute(hConsole, 2);
-            std::cout << text << std::endl;
-            SetConsoleTextAttribute(hConsole, 7);
+            HANDLE  hConsole;
+            int k;
+            hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            for (k = 1; k < 2; k++)
+            {
+                SetConsoleTextAttribute(hConsole, 2);
+                std::cout << text << std::endl;
+                SetConsoleTextAttribute(hConsole, 7);
+            }
         }
-    }
 
-    void light_blue(std::string text)
-    {
-        HANDLE  hConsole;
-        int k;
-        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-        for (k = 1; k < 2; k++)
+        void light_blue(std::string text)
         {
-            SetConsoleTextAttribute(hConsole, 3);
-            std::cout << text << std::endl;
-            SetConsoleTextAttribute(hConsole, 7);
+            HANDLE  hConsole;
+            int k;
+            hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            for (k = 1; k < 2; k++)
+            {
+                SetConsoleTextAttribute(hConsole, 3);
+                std::cout << text << std::endl;
+                SetConsoleTextAttribute(hConsole, 7);
+            }
         }
-    }
 
-    void red(std::string text)
-    {
-        HANDLE  hConsole;
-        int k;
-        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-        for (k = 1; k < 2; k++)
+        void red(std::string text)
         {
-            SetConsoleTextAttribute(hConsole, 4);
-            std::cout << text << std::endl;
-            SetConsoleTextAttribute(hConsole, 7);
+            HANDLE  hConsole;
+            int k;
+            hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            for (k = 1; k < 2; k++)
+            {
+                SetConsoleTextAttribute(hConsole, 4);
+                std::cout << text << std::endl;
+                SetConsoleTextAttribute(hConsole, 7);
+            }
         }
-    }
 
-    void purple(std::string text)
-    {
-        HANDLE  hConsole;
-        int k;
-        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-        for (k = 1; k < 2; k++)
+        void purple(std::string text)
         {
-            SetConsoleTextAttribute(hConsole, 5);
-            std::cout << text << std::endl;
-            SetConsoleTextAttribute(hConsole, 7);
+            HANDLE  hConsole;
+            int k;
+            hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            for (k = 1; k < 2; k++)
+            {
+                SetConsoleTextAttribute(hConsole, 5);
+                std::cout << text << std::endl;
+                SetConsoleTextAttribute(hConsole, 7);
+            }
         }
-    }
 
-    void yellow(std::string text)
-    {
-        HANDLE  hConsole;
-        int k;
-        hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
-        for (k = 1; k < 2; k++)
+        void yellow(std::string text)
         {
-            SetConsoleTextAttribute(hConsole, 6);
-            std::cout << text << std::endl;
-            SetConsoleTextAttribute(hConsole, 7);
+            HANDLE  hConsole;
+            int k;
+            hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
+            for (k = 1; k < 2; k++)
+            {
+                SetConsoleTextAttribute(hConsole, 6);
+                std::cout << text << std::endl;
+                SetConsoleTextAttribute(hConsole, 7);
+            }
         }
-    }
 }
 
 // Uses namespace so now you can just type red("TEXT");
