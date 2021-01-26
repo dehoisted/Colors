@@ -6,7 +6,7 @@
 */
 
 #include <iostream>
-#include <windows.h>
+#include <Windows.h>
 
 namespace Color {
     int colors = 6;
