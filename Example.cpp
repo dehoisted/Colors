@@ -1,3 +1,4 @@
+// Example -- Colors
 int main()
 {
     // Parse desired color for 1 line
