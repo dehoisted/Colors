@@ -1,6 +1,8 @@
 # Colors
 Simple header file which allows you to easily put colors on your C++ text.
 All you gotta do is include "Colors.h" and you should be ready.
+Compiled with Microsoft Visual Studio 2019
+WINDOWS ONLY
 
 # How to use
 color(integer, string);
