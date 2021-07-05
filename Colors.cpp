@@ -2,61 +2,68 @@
 
 HANDLE Console = GetStdHandle(STD_OUTPUT_HANDLE);
 
-inline void Colors::ResetC()
+void Colors::Reset()
 {
     SetConsoleTextAttribute(Console, 7);
 }
 
-void Colors::set_color(int i)
-{
-    SetConsoleTextAttribute(Console, i);
-}
-
-void Colors::blue(std::string text)
-{
-    SetConsoleTextAttribute(Console, 1);
-    std::cout << text << std::endl;
-    ResetC();
-}
-
-void Colors::green(std::string text)
-{
-    SetConsoleTextAttribute(Console, 2);
-    std::cout << text << std::endl;
-    ResetC();
-}
-
-void Colors::light_blue(std::string text)
-{
-    SetConsoleTextAttribute(Console, 3);
-    std::cout << text << std::endl;
-    ResetC();
-}
-
-void Colors::red(std::string text)
-{
-    SetConsoleTextAttribute(Console, 4);
-    std::cout << text << std::endl;
-    ResetC();
-}
-
-void Colors::purple(std::string text)
-{
-    SetConsoleTextAttribute(Console, 5);
-    std::cout << text << std::endl;
-    ResetC();
-}
-
-void Colors::yellow(std::string text)
-{
-    SetConsoleTextAttribute(Console, 6);
-    std::cout << text << std::endl;
-    ResetC();
-}
-
-void Colors::print(std::string text, int x)
+void Colors::Set_Color(static const int x)
 {
     SetConsoleTextAttribute(Console, x);
-    std::cout << text << std::endl;
-    ResetC();
+}
+
+void Colors::Print(std::string text, static const int color)
+{
+    try {
+        HANDLE console;
+        console = GetStdHandle(STD_OUTPUT_HANDLE);
+
+        switch (color)
+        {
+        case BLUE:
+            SetConsoleTextAttribute(console, BLUE);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(console, DEFAULT);
+            break;
+
+        case GREEN:
+            SetConsoleTextAttribute(console, GREEN);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(console, DEFAULT);
+            break;
+
+        case LIGHT_BLUE:
+            SetConsoleTextAttribute(console, LIGHT_BLUE);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(console, DEFAULT);
+            break;
+
+        case RED:
+            SetConsoleTextAttribute(console, RED);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(console, DEFAULT);
+            break;
+
+        case PURPLE:
+            SetConsoleTextAttribute(console, PURPLE);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(console, DEFAULT);
+            break;
+
+        case YELLOW:
+            SetConsoleTextAttribute(console, YELLOW);
+            std::cout << text << std::endl;
+            SetConsoleTextAttribute(console, DEFAULT);
+            break;
+
+        default:
+            std::cout << "Error in Colors.h: Invalid Color Listed!" << std::endl;
+            break;
+        }
+    }
+
+    catch (std::exception& e)
+    {
+        std::cout << "Exception thrown in Colors.h: " << e.what() << std::endl;
+    }
 }
