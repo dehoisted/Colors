@@ -1,23 +1,20 @@
+#define WIN32_LEAN_AND_MEAN
 #include <iostream>
 #include <Windows.h>
 
 namespace Colors
 {
-    inline static void ResetC();
+    enum Color {
+        DEFAULT,
+        BLUE,
+        GREEN,
+        LIGHT_BLUE,
+        RED,
+        PURPLE,
+        YELLOW
+    };
 
-    inline void set_color(int i);
-
-    void blue(std::string text);
-
-    void green(std::string text);
-
-    void light_blue(std::string text);
-
-    void red(std::string text);
-
-    void purple(std::string text);
-
-    void yellow(std::string text);
-
-    void print(std::string text, int x);
+    void Reset();
+    void Set_Color(static const int x);
+    void Print(std::string text, static const int);
 }
